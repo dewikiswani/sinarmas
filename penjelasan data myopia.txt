@@ -1,0 +1,29 @@
+A data.frame with 618 rows and 18 variables:
+id 		Subject identifier (1-1503)
+studyyear 	Year subject entered the study (Year)
+myopic 		Myopia within the first five years of follow up (1: No, 2: Yes)
+age 		Age at first visit (Years)
+gender 		Gender (1: Male, 2: Female)
+spheq 		Spherical Equivalent Refraction (diopter)
+al 		Axial Length (mm)
+acd 		Anterior Chamber Depth (mm)
+lt 		Lens Thickness (mm)
+vcd 		Vitreous Chamber Depth (mm)
+sporthr 	How many hours per week outside of school the child spent engaging in sports/outdoor activities (Hours per week)
+readhr 		How many hours per week outside of school the child spent reading for pleasure (Hours per week)
+comphr 		How many hours per week outside of school the child spent playing video/computer
+games or working on the computer (Hours per week)
+studyhr 	How many hours per week outside of school the child spent reading or studying for school
+assignments (Hours per week)
+tvhr 		How many hours per week outside of school the child spent watching television (Hours per
+week)
+diopterhr 	Composite of near-work activities (Hours per week)
+mommy 		Was the subject’s mother myopic? (1: No, 2: Yes)
+dadmy 		Was the subject’s father myopic? (1: No, 2: Yes)
+
+
+
+
+
+d 4400000
+g 1195000
