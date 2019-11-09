@@ -1,0 +1,34 @@
+%macro coba;
+%do i=480 %to 540;
+data data.datascoring;
+set data.datascoring;
+if SCOREtotal > &i then predict = "GOOD";
+else predict = "BAD ";
+run;
+
+
+proc tabulate data=data.datascoring out=dd;
+class status predict;
+table status, predict*n;
+run;
+
+data null;
+set dd;
+if status = 'BAD' and predict = 'BAD' then call symput("bb", n);
+if status = 'BAD' and predict = 'GOOD' then call symput("bg", n);
+if status = 'GOOD' and predict = 'GOOD' then call symput("gg", n);
+if status = 'GOOD' and predict = 'BAD' then call symput("gb", n);
+run;
+
+data hasil;
+threshold = &i;
+akurasi = (&bb + &gg) / (&bb + &bg + &gb + &gg);
+acceptancerate = (&bg + &gg) / (&bb + &bg + &gb + &gg);
+badrate = &bg / (&bg + &gg);
+run;
+
+proc append data=hasil base=hasil1 force;
+run;
+%end;
+%mend;
+%coba;
